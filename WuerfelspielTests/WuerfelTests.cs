@@ -16,8 +16,11 @@ namespace WuerfelspielTests
 
             //Act
             WuerfelTests wuerfel = new WuerfelTests();
-            
+
             //Assert
+            Assert.AreEqual(seitenanzahl, wuerfel.AnzahlSeiten);
+            Assert.IsFalse(wuerfel.Gesichert);
+            Assert.AreEqual(Letztesergebnis, wuerfel.LetztesErgebnis);
             Assert.IsTrue(true);
         }
     }

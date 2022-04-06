@@ -6,7 +6,7 @@ namespace Wuerfelspiel
     {
         private int anzahlSeiten;
         private int letztesErgebnis;
-        private bool gesischert;
+        private bool gesichert;
         Random rnd = new Random();
 
         Wuerfel(int anzahlSeiten)
@@ -24,28 +24,29 @@ namespace Wuerfelspiel
         {
             get
             {
-                return anzahlSeiten;
+                return letztesErgebnis;
             }
         }
-        public bool Gesischert
+        public bool Gesichert
         {
             get
             {
-                return gesischert;
+                return gesichert;
             }
             set
             {
-                gesischert = value;
+                gesichert = value;
             }
         }
-        public static void SicherungUmschalten()
+        public void SicherungUmschalten()
         {
             //Gesischert true oder false
-            
+            gesichert = !gesichert;
         }
-        public static int Wuerfeln()
+        public int Wuerfeln(int ergebnis)
         {
-            if()
+            ergebnis = rnd.Next(0, 7);
+            return ergebnis;
         }
     }
 }
