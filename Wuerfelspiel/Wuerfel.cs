@@ -9,10 +9,15 @@ namespace Wuerfelspiel
         private bool gesichert;
         Random rnd = new Random();
 
-        Wuerfel(int anzahlSeiten)
+        public Wuerfel()
+        {
+
+        }
+        public Wuerfel(int anzahlSeiten):this()
         {
             this.anzahlSeiten = anzahlSeiten;
         }
+
         public int AnzahlSeiten
         {
             get
